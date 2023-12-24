@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamCipher | Sign Up</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/main.css">
+</head>
+
+<body class="formBody">
+
+    <center>
+        <form id="registerForm" class="regForm">
+            <fieldset class="formFieldset" id="formFieldset" disabled="true">
+
+                <h4 class="formHeader" style="margin-bottom: 40px;">ExamCipher</h4>
+                <table align="center" cellspacing="15">
+                    <tr>
+                        <td>First Name</td>
+                        <td class="input-icons">
+                            <i class="fas fa-user regIcon"></i>
+                            <input class="regInput input-field form-control" type="text" name="FirstName" maxlength="50" placeholder="David" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Name</td>
+                        <td class="input-icons">
+                            <i class="fas fa-user regIcon"></i>
+                            <input class="regInput input-field form-control" type="text" name="LastName" maxlength="50" placeholder="Fola" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email: </td>
+                        <td class="input-icons">
+                            <i class="fas fa-envelope regIcon"></i>
+                            <input class="regInput input-field form-control" type="email" name="EmailID" maxlength="100" placeholder="@gmail.com" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mobile Number</td>
+                        <td class="input-icons">
+                            <i class="fas fa-address-card regIcon"></i>
+                            <input class="regInput input-field form-control" type="text" name="MobileNumber" maxlength="14" placeholder="+234" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Password</td>
+                        <td class="input-icons">
+                            <i class="fas fa-lock regIcon"></i>
+                            <input class="regInput input-field form-control" type="password" name="Password" placeholder="********" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td class="input-icons">
+                            <i class="fas fa-lock regIcon"></i>
+                            <input class="regInput input-field form-control" type="password" name="ConfirmPassword" placeholder="********" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <!-- Alfred's includes -->
+                            <span class="msg_section" id="msg_section"></span>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input style="margin: 15px 0px 5px 30px;" type="radio" name="Gender" value="Male" required/> Male
+                            <input type="radio" name="Gender" value="Female" required/> Female
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Date of Birth(DOB)</td>
+                        <td>
+                            <input type="date" name="" id="BirthDay" class="regInput input-field form-control">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <a href="../index.html" class="btn btn-outline-danger my-3">Go Back</a>
+                            <button id="submitBtn" class="btn auth" type="submit">Submit</button>
+                            <br><br>
+                            <small>Already have an account? <a href="./login.html" style="text-decoration: none;">Login now</a></small>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </fieldset>
+        </form>
+    </center>
+
+    <!-- JS Links -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+    <!-- Personal Js  #### Has to come last or at least after firebase -->
+    <script src="../Js/script.js"></script>
+
+</body>
+
+</html>
