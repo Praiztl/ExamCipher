@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="shortcut icon" href="../media/img/BU logo.jpg" type="image/x-icon">
+
+    <title>ExamCipher | Login Page</title>
+</head>
+
+<body class="formBody">
+
+    <center>
+        <div class="loginForm">
+            <form id="logInForm">
+                <fieldset class="formFieldset" id="formFieldset" disabled="true">
+                    <h4 class="formHeader">ExamCipher</h4>
+                    <table>
+                        <tr>
+                            <td class="logName">E-mail </td>
+                            <td class="input-icons">
+                                <i class="fa fa-envelope icon" style="color: rgb(216, 146, 216);"></i>
+                                <input name="emailInput" class="input-field form-control" type="email" placeholder="example@student.babcock.edu.ng" required> <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="logName">Password </td>
+                            <td class="input-icons">
+                                <i class="fa fa-lock icon" style="color: rgb(216, 146, 216);"></i>
+                                <input name="passwordInput" class="input-field form-control" type="password" placeholder="********" required>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="my-3">
+                        <a href="../index.html" class="btn btn-outline-danger">Go Back</a>
+                        <button id="loginBtn" class="btnForm btn auth" type="submit">Login</button> <br>
+                    </div>
+                    <br>
+                    <small>Don't have an account? <a href="./register.html" style="text-decoration: none;">Register now</a></small>
+                </fieldset>
+            </form>
+        </div>
+    </center>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+    <!-- Personal Js  #### Has to come last or at least after firebase -->
+    <script src="../Js/CP-ABE.js"></script>
+    <script src="../Js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="shortcut icon" href="../media/img/BU logo.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/dc8ee980c4.js" crossorigin="anonymous"></script>
+
+
+
+    <title>Exam</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand navheader" href="index.html">
+            <img src="../media/img/BU logo.jpg" alt="ExamCipher Logo" class="navbar-logo">ExamCipher
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/selection.html" id="examsLink">Exam</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/aboutus-User.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-account-group ml-auto">
+            <div class="user-account-group ml-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item floatRight">
+                        <a href="../index.html" style="color: #fff;" class="nav-link">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- IGNORE ALL THE GREEN HIGHLIGHTING IT IS CORRECT -->
+    <center style="margin-top: 7rem;">
+        <h1 class="topText selectionText">Select Exam</h1>
+        <h4 class="selectionText">Please Select from available test exams!</h4>
+
+        <div class="selectionContainer">
+            <table class="">
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/maths.png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Math 101</h4>
+                    </td>
+                    <td><button onclick="startSession('Math 101')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/english.png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Eng 201</h4>
+                    </td>
+                    <td><button onclick="startSession('Eng 201')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/physics.png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Phy 301</h4>
+                    </td>
+                    <td><button onclick="startSession('Phy 301')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/chemistry(1).png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Chem 401</h4>
+                    </td>
+                    <td><button onclick="startSession('Chem 401')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/biology.png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Bio 101</h4>
+                    </td>
+                    <td><button onclick="startSession('Bio 101')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/geography.png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Geo 201</h4>
+                    </td>
+                    <td><button onclick="startSession('Geo 201')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/download.jpg" alt=""></td>
+                    <td>
+                        <h4 class="subName">Econs 301</h4>
+                    </td>
+                    <td><button onclick="startSession('Econs 301')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+                <tr class="subRow">
+                    <td><img class="subImg" src="../media/img/history.png" alt=""></td>
+                    <td>
+                        <h4 class="subName">Hist 401</h4>
+                    </td>
+                    <td><button onclick="startSession('Hist 401')" class="btn btn-outline-secondary">Start Session</button></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+    <!-- Personal Js  #### Has to come last or at least after firebase -->
+    <script src="../Js/CP-ABE.js"></script>
+    <script src="../Js/script.js"></script>
+
+
+    <!--  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="shortcut icon" href="../media/img/BU logo.jpg" type="image/x-icon">
+    <title>Security Question</title>
+
+</head>
+
+<body class="formBody">
+    <center>
+        <form id="securityQuestionForm" class="regForm">
+            <fieldset class="formFieldset" id="formFieldset">
+                <h4 class="formHeader" style="margin-bottom: 40px;">Security Question</h4>
+                <table align="center" cellspacing="15">
+                    <tr>
+                        <td id="questionText"></td>
+                        <td class="input-icons">
+                            <input class="regInput input-field form-control" id="answerInput" type="text" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button id="submitBtn" style="margin-top: 40px" class="btn auth" type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </center>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+    <!-- Personal Js  #### Has to come last or at least after firebase -->
+    <script src="../Js/script.js"></script>
+    <script src="../Js/CP-ABE.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

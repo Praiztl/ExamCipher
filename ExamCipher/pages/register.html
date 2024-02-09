@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamCipher | Sign Up</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="shortcut icon" href="../media/img/BU logo.jpg" type="image/x-icon">
+
+
+</head>
+
+<body class="formBody">
+
+    <center>
+        <form id="registerForm" class="regForm">
+            <fieldset class="formFieldset" id="formFieldset" disabled="true">
+
+                <h4 class="formHeader" style="margin-bottom: 40px;">ExamCipher</h4>
+                <table align="center" cellspacing="15">
+                    <tr>
+                        <td>First Name</td>
+                        <td class="input-icons">
+                            <i class="fas fa-user regIcon"></i>
+                            <input class="regInput input-field form-control" type="text" name="FirstName" maxlength="50" placeholder="Toluwalope" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Name</td>
+                        <td class="input-icons">
+                            <i class="fas fa-user regIcon"></i>
+                            <input class="regInput input-field form-control" type="text" name="LastName" maxlength="50" placeholder="Ope" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email: </td>
+                        <td class="input-icons">
+                            <i class="fas fa-envelope regIcon"></i>
+                            <input class="regInput input-field form-control" type="email" name="EmailID" maxlength="100" placeholder="@student.babcock.edu.ng" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mobile Number</td>
+                        <td class="input-icons">
+                            <i class="fas fa-address-card regIcon"></i>
+                            <input class="regInput input-field form-control" type="text" name="MobileNumber" maxlength="14" placeholder="+234" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td class="input-icons">
+                            <select id="role" name="role" class="regInput input-field" onchange="showHideLevelCheckboxes()">
+                                <option value="" selected hidden style="color: #797c80;">Select Role </option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <tr id="studentLevelsRow" style="display: none;">
+                        <td>Student Study Level</td>
+                        <td>
+                            <div class="form-check courses-container">
+                                <label class="form-check-label">
+                                    <input type="radio" name="study-level" value="100"/> 100
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="radio" name="study-level" value="200" /> 200
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="radio" name="study-level" value="300" /> 300
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="radio" name="study-level" value="400"/> 400
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="radio" name="study-level" value="500" /> 500
+                                </label>
+                                <!-- Add other courses similarly -->
+                            </div>
+                            <!-- Add other level options similarly -->
+                        </td>
+                    </tr>
+
+
+                    <!-- New section for faculty, department, and course selection -->
+                    <tr id="facultySessionRow" style="display: none;">
+                        <td>Faculty</td>
+                        <td>
+                            <select id="faculty" name="faculty" class="regInput input-field">
+                                <option value="" selected hidden>Select Faculty </option>
+                                <option value="managementSciences">Benjamin S. Carson (Snr) College of Heakth and Medical Sciences</option>
+                                <option value="computingEngineering">School of Computing and Engineering Sciences</option>
+                                <option value="educationHumanities">School of Education and Humanities</option>
+                                <option value="lawSecurity">School of Law and Security Studies</option>
+                                <option value="managementSciences">School of Management Sciences</option>
+                                <option value="nursingSciences">School of Nursing Sciences</option>
+                                <option value="publicAlliedHealth">School of Public and Allied Health</option>
+                                <option value="scienceTechnology">School of Science and Technology</option>
+                                <option value="managementSciences">School of Management Sciences</option>
+                                <option value="managementSciences">Veronica Adeleke School of Social Science</option>
+                                <option value="managementSciences">College of Postgraduate Studies</option>
+
+
+                    
+                                <!-- Add more faculties as needed -->
+                            </select>
+                        </td>
+                    </tr>
+
+
+                    <tr id="departmentRow" style="display: none;">
+                        <td>Department</td>
+                        <td>
+                            <input type="text" name="department" class="regInput input-field form-control" placeholder="Enter Department" required/>
+                        </td>
+                    </tr>
+
+                    <tr id="courseSelectionRow" style="display: none;">
+                        <td>Enrolled Courses</td>
+                        <td>
+                            <div class="form-check courses-container">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Math 101"/> Math 101
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Eng 201" /> Eng 201
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Phy 301" /> Phy 301
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Chem 401" /> Chem 401
+                                </label>
+
+                                <!-- Add other courses similarly -->
+                            </div>
+
+                            <div class="form-check courses-container">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Hist 401" /> Hist 401
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Bio 101"/> Bio 101
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Geo 201" /> Geo 201
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Econs 301" /> Econs 301
+                                </label>
+
+                                <!-- Add other courses similarly -->
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr id="courseTakenRow" style="display: none;">
+                        <td>Courses Taught</td>
+                        <td>
+                            <div class="form-check courses-container">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Math 101"/> Math 101
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Eng 201" /> Eng 201
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Phy 301" /> Phy 301
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Chem 401" /> Chem 401
+                                </label>
+
+                                <!-- Add other courses similarly -->
+                            </div>
+
+                            <div class="form-check courses-container">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Hist 401" /> Hist 401
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Bio 101"/> Bio 101
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Geo 201" /> Geo 201
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="course" value="Econs 301" /> Econs 301
+                                </label>
+
+                                <!-- Add other courses similarly -->
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr id="teacherLevelsRow" style="display: none;">
+                        <td>Teaching level</td>
+                        <td>
+                            <div class="form-check courses-container">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="teach-level" value="100"/> 100
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="teach-level" value="200" /> 200
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="teach-level" value="300" /> 300
+                                </label>
+
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="teach-level" value="400" /> 400
+                                </label>
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="teach-level" value="500" /> 500
+                                </label>
+
+                                <!-- Add other courses similarly -->
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr id="teachingFaculty" style="display: none;">
+                        <td>Faculty</td>
+                        <td>
+                            <select id="faculty" name="faculty" class="regInput input-field">
+                                <option value="" selected hidden>Select Faculty </option>
+                                <option value="managementSciences">Benjamin S. Carson (Snr) College of Health and Medical Sciences</option>
+                                <option value="computingEngineering">School of Computing and Engineering Sciences</option>
+                                <option value="educationHumanities">School of Education and Humanities</option>
+                                <option value="lawSecurity">School of Law and Security Studies</option>
+                                <option value="managementSciences">School of Management Sciences</option>
+                                <option value="nursingSciences">School of Nursing Sciences</option>
+                                <option value="publicAlliedHealth">School of Public and Allied Health</option>
+                                <option value="scienceTechnology">School of Science and Technology</option>
+                                <option value="managementSciences">School of Management Sciences</option>
+                                <option value="managementSciences">Veronica Adeleke School of Social Science</option>
+                                <option value="managementSciences">College of Postgraduate Studies</option>
+
+
+                    
+                                <!-- Add more faculties as needed -->
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Password</td>
+                        <td class="input-icons">
+                            <i class="fas fa-lock regIcon"></i>
+                            <input class="regInput input-field form-control" type="password" name="Password" placeholder="********" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td class="input-icons">
+                            <i class="fas fa-lock regIcon"></i>
+                            <input class="regInput input-field form-control" type="password" name="ConfirmPassword" placeholder="********" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <!-- Alfred's includes -->
+                            <span class="msg_section" id="msg_section"></span>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input style="margin: 15px 0px 5px 30px;" type="radio" name="Gender" value="Male" required/> Male
+                            <input type="radio" name="Gender" value="Female" required/> Female
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Date of Birth(DOB)</td>
+                        <td>
+                            <input type="date" name="" id="BirthDay" class="regInput input-field form-control">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <a href="../index.html" class="btn btn-outline-danger my-3">Go Back</a>
+                            <button id="submitBtn" class="btn auth" type="submit">Submit</button>
+                            <br><br>
+                            <small>Already have an account? <a href="./login.html" style="text-decoration: none;">Login now</a></small>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </fieldset>
+        </form>
+    </center>
+
+    <!-- JS Links -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+    <!-- Personal Js  #### Has to come last or at least after firebase -->
+    <script src="../Js/script.js"></script>
+    <script src="../Js/CP-ABE.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>
